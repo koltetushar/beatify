@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommendations</title>
+</head>
+<body>
+    <h1>Recommendations for "{{ song_input }}"</h1>
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Song Name</th>
+            <th>Artist</th>
+            <th>Genre</th>
+            <th>Popularity</th>
+        </tr>
+        {% for song in results %}
+        <tr>
+            <td>{{ song.song_name }}</td>
+            <td>{{ song.artist }}</td>
+            <td>{{ song.genre }}</td>
+            <td>{{ song.popularity }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/recommend-song">Try Another</a>
+</body>
+</html>

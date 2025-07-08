@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualization Results</title>
+</head>
+<body>
+    <h1>Audio Visualization Results</h1>
+
+    <h3>Metadata:</h3>
+    <ul>
+        <li><strong>Tempo:</strong> {{ tempo }} BPM</li>
+        <li><strong>Key:</strong> {{ key }}</li>
+        <li><strong>Scale:</strong> {{ scale }}</li>
+        <li><strong>Energy:</strong> {{ energy }}</li>
+    </ul>
+
+    <h3>Waveform:</h3>
+    {{ waveform_html|safe }}
+
+    <h3>Spectrogram:</h3>
+    {{ spectrogram_html|safe }}
+
+    <h3>Chroma Features:</h3>
+    {{ chroma_html|safe }}
+
+    <h3>MFCCs:</h3>
+    {{ mfcc_html|safe }}
+
+    <br>
+    <a href="/upload-visualize">Try Another</a>
+</body>
+</html>
